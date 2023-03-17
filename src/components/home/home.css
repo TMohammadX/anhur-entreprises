@@ -1,0 +1,36 @@
+.home {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.main-title {
+  color: white;
+  font-weight: 400;
+  font-size: 5vw;
+  margin-bottom: 5%;
+  margin-top: 9%;
+}
+
+.main-img-con {
+  width: 100%;
+  height: max-content;
+  border-radius: 5px;
+}
+
+.main-img {
+  width: 100%;
+  height: max-content;
+  border-radius: 5px;
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+}

@@ -1,0 +1,13 @@
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.app-con {
+  animation: load;
+  animation-duration: 2.5s;
+}

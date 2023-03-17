@@ -1,0 +1,58 @@
+.nav {
+  width: 100vw;
+  height: 6rem;
+  overflow-y: hidden;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+}
+
+.logo-con {
+  margin-right: 20%;
+}
+
+.logo {
+  height: 100px;
+  margin-top: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: max-content;
+}
+
+.nav-cta {
+  height: 50px;
+  width: 120px;
+  background-color: transparent;
+  border: 1px solid #ecba5a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-cta:hover {
+  background-color: #ecba5a;
+}
