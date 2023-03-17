@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "./loader.css";
 
 export default function Loader() {
@@ -17,15 +17,27 @@ export default function Loader() {
   }, []);
   return (
     <div className="loader">
-      <motion.h1 className="quote">
-        "If you are <b>not willing</b> to{" "}
-        <b>
-          risk <br />
-          the usual
-        </b>
-        , you will have to <br />
-        settle for the <b>ordinary</b>."
-      </motion.h1>
+      <AnimatePresence>
+        <motion.h1 className="quote">
+          <motion.span
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            "If you are <b>not willing</b> to <b>risk </b> <br />
+          </motion.span>
+          <motion.span
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+          >
+            <b>the usual</b>, you will have to <br />
+          </motion.span>
+          <motion.span>
+            settle for the <b>ordinary</b>."
+          </motion.span>
+        </motion.h1>
+      </AnimatePresence>
       <h1 className="perc">{percentage}%</h1>
     </div>
   );
