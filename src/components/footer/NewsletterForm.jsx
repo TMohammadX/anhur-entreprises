@@ -88,7 +88,11 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
       <p className="pp-news">
         By signing up to receive emails from Anhur Enterprises, you agree to our
-        Privacy Policy. We treat your info responsibly. Unsubscribe anytime.
+        Privacy Policy. We treat your info responsibly.{" "}
+        <a href="*|UNSUB|*" style={{ color: "white", textDecoration: "none" }}>
+          Unsubscribe
+        </a>{" "}
+        anytime.
       </p>
       <div className="min-h-42px">
         {"error" === status || error ? (

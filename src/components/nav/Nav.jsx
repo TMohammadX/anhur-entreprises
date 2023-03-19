@@ -8,22 +8,24 @@ export default function Nav() {
   return (
     <div className="nav">
       <div className="nav-inner">
-        <Link to="/" className="logo-con">
+        <a href="/" className="logo-con">
           <img src={logo} alt="logo" className="logo" />
-        </Link>
+        </a>
         <div className="nav-links">
-          <Link2 to="about" spy smooth duration={500} className="nav-link">
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
+          <Link2 to="about" smooth duration={500} className="nav-link">
             About Us
           </Link2>
-          <a href="/Services" className="nav-link">
+          <a href="/services" className="nav-link">
             Services
-          </a>
-          <a href="/contact" className="nav-link">
-            Contact
           </a>
         </div>
       </div>
-      <Link className="nav-cta">Book Now</Link>
+      <Link to="/getstarted" className="nav-cta">
+        Get Started
+      </Link>
     </div>
   );
 }

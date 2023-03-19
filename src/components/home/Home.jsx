@@ -1,14 +1,25 @@
 import React from "react";
 import "./home.css";
+import { motion } from "framer-motion";
+import Transition from "../transition/Transition";
+import gsap from "gsap";
 
 export default function Home() {
+  const home = gsap.timeline();
   return (
     <main className="home">
       <section className="main">
-        <h1 className="main-title">
-          <b>Elevate Your Brand </b>With Premium <br />
-          Services That We Offer.
-        </h1>
+        <motion.h1 className="main-title">
+          <motion.span
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 2 }}
+          >
+            <b>Elevate Your Brand </b>With Premium{" "}
+          </motion.span>
+          <br />
+          <span>Services That We Offer.</span>
+        </motion.h1>
         <div className="main-img-con">
           <div className="main-img"></div>
         </div>

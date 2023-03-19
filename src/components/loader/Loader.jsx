@@ -20,6 +20,7 @@ export default function Loader() {
       <AnimatePresence>
         <motion.h1 className="quote">
           <motion.span
+            className="q-s"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
@@ -27,13 +28,19 @@ export default function Loader() {
             "If you are <b>not willing</b> to <b>risk </b> <br />
           </motion.span>
           <motion.span
+            className="q-s"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.3 }}
           >
             <b>the usual</b>, you will have to <br />
           </motion.span>
-          <motion.span>
+          <motion.span
+            className="q-s"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+          >
             settle for the <b>ordinary</b>."
           </motion.span>
         </motion.h1>

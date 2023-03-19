@@ -10,7 +10,11 @@ function Transition({ timeline }) {
 
   useEffect(() => {
     const timeline = gsap.timeline();
-
+    timeline.to(trans1.current, {
+      duration: 0.1,
+      y: 0,
+      ease: Power4.easeInOut,
+    });
     timeline.to(trans1.current, {
       duration: 2.5,
       y: -2000,
