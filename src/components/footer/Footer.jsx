@@ -21,8 +21,19 @@ export default function Footer() {
         <a href="/" className="footer-link">
           Book Now
         </a>
-        <a href="/" className="footer-link">
-          Privacy Policy
+        <a
+          href="https://www.instagram.com/anhur_enterprises/"
+          className="footer-link"
+          target="_blank"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.facebook.com/people/Anhur-Enterprises/100090777584131/"
+          className="footer-link"
+          target="_blank"
+        >
+          Facebook
         </a>
       </div>
       <h3 className="copyright">

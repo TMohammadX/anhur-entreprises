@@ -11,7 +11,7 @@ export default function Loader() {
         const nextPercentage = prevPercentage + 1;
         return nextPercentage > 100 ? 100 : nextPercentage;
       });
-    }, 40);
+    }, 20);
 
     return () => clearInterval(intervalId);
   }, []);

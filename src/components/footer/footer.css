@@ -124,3 +124,51 @@
     font-size: 1vw;
   }
 }
+
+@media (max-width: 700px) {
+  .footer {
+    height: 100vh;
+    display: grid;
+    place-items: start;
+  }
+  .footer-links {
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .newsletter-con {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    padding: 0 !important;
+    margin: 0;
+    margin-bottom: 5%;
+  }
+  .footer-links-title {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
+  .footer-link {
+    font-size: 0.9rem;
+  }
+  .newsletter-text {
+    font-size: 2rem;
+  }
+  .pp-news {
+    font-size: 0.7rem;
+  }
+  .email-input {
+    font-size: 1.2rem;
+  }
+  .sub {
+    font-size: 2rem;
+  }
+  .success-message {
+    font-size: 0.8rem;
+    margin-top: 1%;
+  }
+  .error-message {
+    font-size: 0.8rem;
+    margin-top: 1%;
+  }
+}

@@ -25,3 +25,14 @@
 .q-s {
   position: relative;
 }
+
+@media (max-width: 700px) {
+  .quote {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .perc {
+    margin-bottom: 35vh;
+    font-size: 1rem;
+  }
+}

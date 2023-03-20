@@ -23,6 +23,7 @@
 .logo {
   height: 100px;
   margin-top: 10px;
+  z-index: 30;
 }
 
 .nav-links {
@@ -55,4 +56,108 @@
 
 .nav-cta:hover {
   background-color: #ecba5a;
+}
+
+.nav-btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-cta2 {
+  display: none;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.cta3 {
+  border-radius: 5px;
+  display: grid;
+  display: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 21;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  color: white;
+  place-items: center;
+}
+
+.ctas {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-in {
+  border-radius: 5px;
+  display: grid;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 23;
+
+  width: 50px;
+  height: 50px;
+  color: #ecba5a;
+  place-items: center;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.b-links {
+  display: grid;
+  margin-top: 100px;
+  margin-left: 10%;
+  gap: 10px;
+}
+
+.b-link {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  line-height: normal;
+  cursor: pointer;
+  width: min-content;
+}
+
+.b-info {
+  color: white;
+  margin-left: 10%;
+  bottom: 5%;
+  position: absolute;
+  display: grid;
+  gap: 20px;
+}
+
+.b-info-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+}
+
+.menuNav {
+  height: 100vh;
+  width: 100%;
+  background-color: #0c0c0c;
+  position: fixed;
+  z-index: 22;
+  top: 0;
+  left: 0;
+  animation: slidein 1s normal;
+  overflow: hidden;
+  padding-bottom: 10%;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  .cta3 {
+    display: grid;
+  }
 }
