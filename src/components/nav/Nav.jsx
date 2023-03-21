@@ -7,6 +7,7 @@ import { HiMenu } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoMdMail } from "react-icons/io";
 import { MdOutlinePhoneIphone, MdClose } from "react-icons/md";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -57,13 +58,42 @@ export default function Nav() {
             <div className="cta-in" onClick={handleToggle}>
               <MdClose size="2rem" color="white" />
             </div>
-            <div className="b-links"></div>
+            <div className="b-links">
+              <Link to="/" className="nav-link-m" onClick={handleClose}>
+                Home
+              </Link>
+              <Link2
+                to="about"
+                smooth
+                duration={500}
+                className="nav-link-m"
+                onClick={handleClose}
+              >
+                About Us
+              </Link2>
+              <a href="/services" className="nav-link-m" onClick={handleClose}>
+                Services
+              </a>
+            </div>
             <div className="b-info">
               <h1 className="b-info-text">
-                <IoMdMail /> info@anhurenterprises.com
+                <IoMdMail />{" "}
+                <a href="mailto:info@anhurenterprises.com">
+                  info@anhurenterprises.com
+                </a>
               </h1>
               <h1 className="b-info-text">
-                <MdOutlinePhoneIphone />
+                <FaFacebook />{" "}
+                <a href="" tar>
+                  Anhur-Enterprises
+                </a>
+              </h1>
+
+              <h1 className="b-info-text">
+                <FaInstagram />{" "}
+                <a href="" tar>
+                  anhur_enterprises
+                </a>
               </h1>
             </div>
           </motion.div>

@@ -11,16 +11,17 @@
 
 .book-title {
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 2rem;
   color: white;
 }
 
 .book-box {
-  width: 40%;
-  height: 100%;
-  background-color: #ecba5a;
+  width: 500px;
+  height: 600px;
+  background-color: transparent;
+  border: 1px solid #ecba5a;
   padding: 50px;
-
+  padding-bottom: 0;
   border-radius: 5px;
   display: grid;
 }
@@ -35,9 +36,11 @@
   height: 50px;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ecba5a;
   outline: none;
   margin-top: 15px;
+  color: white;
+  border-radius: 0;
 }
 
 .book-input::placeholder {
@@ -49,8 +52,8 @@
   height: 50px;
   border: none;
   margin-top: 40px;
-  background-color: black;
-  color: white;
+  background-color: #ecba5a;
+  color: black;
   cursor: pointer;
   justify-self: center;
 }
@@ -58,5 +61,35 @@
 @media (min-width: 1500px) {
   .book-input {
     font-size: 1.2vw;
+  }
+  .book-title {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-box {
+    margin-bottom: 20vh;
+  }
+  .book-title {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-box {
+    width: 370px;
+  }
+}
+
+@media (max-width: 400px) {
+  .book-box {
+    width: 330px;
+  }
+}
+
+@media (max-width: 320px) {
+  .book-box {
+    width: 290px;
   }
 }

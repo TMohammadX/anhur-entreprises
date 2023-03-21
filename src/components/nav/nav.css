@@ -39,6 +39,14 @@
   width: max-content;
 }
 
+.nav-link-m {
+  color: #ecba5a;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2rem;
+  width: max-content;
+}
+
 .nav-cta {
   height: 50px;
   width: 130px;
@@ -127,7 +135,7 @@
 .b-info {
   color: white;
   margin-left: 10%;
-  bottom: 5%;
+  bottom: 20%;
   position: absolute;
   display: grid;
   gap: 20px;
@@ -135,9 +143,18 @@
 
 .b-info-text {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   gap: 20px;
+  display: flex;
+  align-items: center;
+  color: #ecba5a;
+}
+
+.b-info-text > a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
 }
 
 .menuNav {

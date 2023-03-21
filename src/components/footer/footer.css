@@ -83,6 +83,7 @@
   color: white;
   line-height: normal;
   font-family: "Playfair display", serif;
+  border-radius: 0;
 }
 
 .pp-news {
@@ -126,6 +127,9 @@
 }
 
 @media (max-width: 700px) {
+  .copyright {
+    font-size: 0.8rem;
+  }
   .footer {
     height: 100vh;
     display: grid;

@@ -3,6 +3,7 @@ import "./book.css";
 import Transition from "../transition/Transition";
 import gsap from "gsap";
 import emailjs from "emailjs-com";
+import { useLocation } from "react-router-dom";
 
 export default function Book(e) {
   const [sending, setSending] = useState(false);
@@ -52,7 +53,7 @@ export default function Book(e) {
   const handleExpired = () => {
     setIsVerified(false);
     // disable submit button
-    document.getElementById("submit-btn").disabled = true;
+    document.getElementById("submit-btn").Disabled = true;
   };
 
   function validateInputs() {
@@ -90,69 +91,90 @@ export default function Book(e) {
     setMessage(e.target.value);
   }
 
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (location.pathname === "/getstarted") {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1300);
+    }
+  }, []);
   return (
-    <div className="book">
-      <h1 className="book-title">Lets Get Started</h1>
-      <form className="book-box" onSubmit={sendEmail}>
-        <div className="book-inputs-left">
-          <input
-            name="from_name"
-            type="text"
-            className="book-input"
-            placeholder="First Name"
-            value={name}
-            onChange={handleNameChange}
-          />
+    <div style={{ minHeight: "100vh" }}>
+      {loading ? (
+        <Transition />
+      ) : (
+        <div className="book">
+          <h1 className="book-title">Lets Get Started</h1>
+          <form className="book-box" onSubmit={sendEmail}>
+            <div className="book-inputs-left">
+              <input
+                name="from_name"
+                type="text"
+                className="book-input"
+                placeholder="First Name"
+                value={name}
+                onChange={handleNameChange}
+              />
 
-          <input
-            name="from_last_name"
-            type="text"
-            className="book-input"
-            placeholder="Last Name"
-            value={name1}
-            onChange={handleLastNameChange}
-          />
+              <input
+                name="from_last_name"
+                type="text"
+                className="book-input"
+                placeholder="Last Name"
+                value={name1}
+                onChange={handleLastNameChange}
+              />
+            </div>
+            <input
+              name="from_email"
+              type="email"
+              className="book-input"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <input
+              name="number"
+              type="tel"
+              className="book-input"
+              placeholder="Number"
+            />
+            <input
+              name="services"
+              type="text"
+              className="book-input"
+              placeholder="Subject"
+            />
+
+            <input
+              name="message"
+              type="text"
+              className="book-input"
+              placeholder="Message"
+              value={message}
+              onChange={handleMessageChange}
+            />
+
+            <button
+              className="submit"
+              id="submit-btn"
+              type="submit"
+              value="Send"
+            >
+              {sending ? (
+                <span>...</span>
+              ) : sent ? (
+                <span>&#10004;</span>
+              ) : (
+                <span>submit</span>
+              )}
+            </button>
+          </form>
         </div>
-        <input
-          name="from_email"
-          type="email"
-          className="book-input"
-          placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        <input
-          name="number"
-          type="tel"
-          className="book-input"
-          placeholder="Number"
-        />
-        <input
-          name="services"
-          type="text"
-          className="book-input"
-          placeholder="Subject"
-        />
-
-        <input
-          name="message"
-          type="text"
-          className="book-input"
-          placeholder="Message"
-          value={message}
-          onChange={handleMessageChange}
-        />
-
-        <button className="submit" id="submit-btn" type="submit" value="Send">
-          {sending ? (
-            <span>...</span>
-          ) : sent ? (
-            <span>&#10004;</span>
-          ) : (
-            <span>submit</span>
-          )}
-        </button>
-      </form>
+      )}
     </div>
   );
 }
