@@ -5,7 +5,6 @@ import Nav from "./components/nav/Nav";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 import Loader from "./components/loader/Loader";
-import Contact from "./components/contact/Contact";
 import Services from "./components/services/Services";
 import I404 from "./components/I404/I404";
 import Book from "./components/book/Book.jsx";

@@ -66,6 +66,7 @@ export default function Nav() {
                 to="about"
                 smooth
                 duration={500}
+                offset={-200}
                 className="nav-link-m"
                 onClick={handleClose}
               >
