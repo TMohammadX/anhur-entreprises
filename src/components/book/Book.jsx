@@ -98,7 +98,7 @@ export default function Book(e) {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 1300);
+      }, 1250);
     }
   }, []);
   return (
@@ -118,7 +118,6 @@ export default function Book(e) {
                 value={name}
                 onChange={handleNameChange}
               />
-
               <input
                 name="from_last_name"
                 type="text"
@@ -148,7 +147,6 @@ export default function Book(e) {
               className="book-input"
               placeholder="Subject"
             />
-
             <input
               name="message"
               type="text"
@@ -157,7 +155,6 @@ export default function Book(e) {
               value={message}
               onChange={handleMessageChange}
             />
-
             <button
               className="submit"
               id="submit-btn"

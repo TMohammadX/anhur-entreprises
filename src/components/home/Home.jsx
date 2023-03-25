@@ -17,7 +17,7 @@ const carouselItems = [
   {
     id: 1,
     content: (
-      <>
+      <div>
         <div>
           <div className="p-con">
             <div className="p-img"></div>
@@ -46,14 +46,14 @@ const carouselItems = [
           </div>
           <RiDoubleQuotesL className="p-ab" />
         </div>
-      </>
+      </div>
     ),
   },
 
   {
     id: 2,
     content: (
-      <>
+      <div>
         <div>
           <div className="p-con">
             <div className="p-img1"></div>
@@ -83,13 +83,13 @@ const carouselItems = [
           </div>
           <RiDoubleQuotesL className="p-ab" />
         </div>
-      </>
+      </div>
     ),
   },
   {
     id: 3,
     content: (
-      <>
+      <div>
         <div>
           <div className="p-con">
             <div className="p-img2"></div>
@@ -118,7 +118,7 @@ const carouselItems = [
           </div>
           <RiDoubleQuotesL className="p-ab" />
         </div>
-      </>
+      </div>
     ),
   },
 ];
@@ -138,27 +138,46 @@ export default function Home() {
     );
   };
 
+  const handleDragEnd = (e, { offset, velocity }) => {
+    const swipe = Math.abs(offset.x) * velocity.x;
+
+    if (swipe < -10000) handleNextItem();
+    else swipe > 10000;
+    {
+      handlePrevItem();
+    }
+  };
+
   return (
     <main className="home">
       <section className="main">
-        <motion.h1 className="main-title">
-          <motion.span
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 2 }}
-          >
-            <b>Elevate Your Brand </b>With Premium{" "}
-          </motion.span>
-          <br />
-          <span>Services That We Offer.</span>
-        </motion.h1>
-        <div className="main-img-con">
-          <div className="main-img"></div>
-        </div>
+        <AnimatePresence>
+          <div className="main-title">
+            <motion.h1
+              initial={{ y: 40, opacity: 0.1 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="main-t"
+            >
+              <b>Elevate Your Brand </b>With Premium{" "}
+            </motion.h1>
+            <motion.h1
+              initial={{ y: 40, opacity: 0.1 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="main-t"
+            >
+              Services That We Offer.
+            </motion.h1>
+          </div>
+          <div className="main-img-con">
+            <div className="main-img"></div>
+          </div>
+        </AnimatePresence>
       </section>
       <section className="about">
         <h1 className="about-title">- About</h1>
-        <p className="about-p">
+        <motion.p className="about-p">
           At Anhur Enterprises, we are dedicated to providing top-quality
           services to help our clients succeed. Our team of experts works
           seamlessly to exceed your expectations and meet your evolving needs.
@@ -166,10 +185,24 @@ export default function Home() {
           product photography, copywriting, and more. Our mission is to provide
           you with premium services that will help you achieve your business
           objectives and thrive in a competitive environment.
-        </p>
+        </motion.p>
+      </section>
+      <section className="services">
+        <h1 className="service-title">services</h1>
+        <div className="service-boxs">
+          <div className="service-box"></div>
+          <div className="service-box"></div>
+          <div className="service-box"></div>
+          <div className="service-box"></div>
+          <div className="service-box"></div>
+          <div className="service-box"></div>
+        </div>
       </section>
       <section className="testm">
-        <h1 className="testm-title">Testemonials</h1>
+        <h1 className="testm-title">
+          What Others Say <br />
+          <b>About Us</b>
+        </h1>
         <div className="testm-in">
           <div className="testm-back" onClick={handlePrevItem}>
             <BsArrowLeftShort />
@@ -183,6 +216,10 @@ export default function Home() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.5 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={handleDragEnd}
               >
                 {carouselItems[currentItem].content}
               </motion.div>

@@ -18,32 +18,32 @@ export default function Loader() {
   return (
     <div className="loader">
       <AnimatePresence>
-        <motion.h1 className="quote">
-          <motion.span
+        <motion.div className="quote">
+          <motion.h1
             className="q-s"
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 20, opacity: 0.1 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
             "If you are <b>not willing</b> to <b>risk </b> <br />
-          </motion.span>
-          <motion.span
+          </motion.h1>
+          <motion.h1
             className="q-s"
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 20, opacity: 0.1 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.3 }}
           >
             <b>the usual</b>, you will have to <br />
-          </motion.span>
-          <motion.span
+          </motion.h1>
+          <motion.h1
             className="q-s"
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 20, opacity: 0.1 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
             settle for the <b>ordinary</b>."
-          </motion.span>
-        </motion.h1>
+          </motion.h1>
+        </motion.div>
       </AnimatePresence>
       <h1 className="perc">{percentage}%</h1>
     </div>

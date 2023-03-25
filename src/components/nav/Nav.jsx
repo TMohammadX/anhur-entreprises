@@ -33,9 +33,9 @@ export default function Nav() {
           <Link2 to="about" smooth duration={500} className="nav-link">
             About Us
           </Link2>
-          <a href="/services" className="nav-link">
+          <Link2 to="services" smooth duration={1000} className="nav-link">
             Services
-          </a>
+          </Link2>
         </div>
       </div>
       <div className="nav-btns">
@@ -72,9 +72,15 @@ export default function Nav() {
               >
                 About Us
               </Link2>
-              <a href="/services" className="nav-link-m" onClick={handleClose}>
+              <Link2
+                to="services"
+                smooth
+                duration={1000}
+                className="nav-link-m"
+                onClick={handleClose}
+              >
                 Services
-              </a>
+              </Link2>
             </div>
             <div className="b-info">
               <h1 className="b-info-text">
@@ -85,14 +91,20 @@ export default function Nav() {
               </h1>
               <h1 className="b-info-text">
                 <FaFacebook />{" "}
-                <a href="" tar>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100090777584131"
+                  target="_blank"
+                >
                   Anhur-Enterprises
                 </a>
               </h1>
 
               <h1 className="b-info-text">
                 <FaInstagram />{" "}
-                <a href="" tar>
+                <a
+                  href="https://www.instagram.com/anhur_enterprises/"
+                  target="_blank"
+                >
                   anhur_enterprises
                 </a>
               </h1>
