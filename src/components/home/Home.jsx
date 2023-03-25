@@ -34,14 +34,14 @@ const carouselItems = [
           </div>
           <div className="p-text">
             <h1 className="p-text-title">
-              <RiDoubleQuotesL color="#ecba5a" /> I recently used a copyrighting
-              service for my business and was blown away by the results. The
-              team was extremely professional and easy to work with, and they
-              were able to deliver high-quality copyrighting that perfectly
-              captured the voice and tone of my brand. Their attention to detail
-              was exceptional, and they made sure that every word was carefully
-              crafted to effectively communicate my message to my target
-              audience. <RiDoubleQuotesR color="#ecba5a" />
+              <RiDoubleQuotesL color="#ecba5a" /> Anhur Enterprises has exceeded
+              my expectations in providing top-notch copyrighting services.
+              Their team of expert writers delivered high-quality, engaging
+              content tailored to my brand's voice and target audience. They
+              consistently met deadlines and demonstrated a deep understanding
+              of the nuances of copyright laws. I highly recommend Anhur
+              Enterprises for anyone seeking creative and legally sound content.{" "}
+              <RiDoubleQuotesR color="#ecba5a" />
             </h1>
           </div>
           <RiDoubleQuotesL className="p-ab" />
@@ -70,15 +70,14 @@ const carouselItems = [
           </div>
           <div className="p-text">
             <h1 className="p-text-title">
-              <RiDoubleQuotesL color="#ecba5a" /> I recently had the pleasure of
-              working with Anhur Enterprises for a consultation on my small
-              business. Their team was incredibly knowledgeable and provided me
-              with valuable insights and recommendations that have helped me to
-              improve my operations and increase my profits. What I appreciated
-              most about working with Anhur Enterprises was their personalized
-              approach. They took the time to understand my unique business
-              needs and goals, and tailored their recommendations accordingly.
-              audience. <RiDoubleQuotesR color="#ecba5a" />
+              <RiDoubleQuotesL color="#ecba5a" /> I recently consulted Anhur
+              Enterprises for assistance with critical business decision-making,
+              and I couldn't be happier with the results. Their team of
+              experienced professionals provided valuable insights and strategic
+              guidance, allowing me to make informed decisions that have
+              positively impacted my business's growth. Anhur Enterprises'
+              commitment to data-driven analysis and personalized attention sets
+              them apart in the industry <RiDoubleQuotesR color="#ecba5a" />
             </h1>
           </div>
           <RiDoubleQuotesL className="p-ab" />
@@ -106,14 +105,17 @@ const carouselItems = [
           </div>
           <div className="p-text">
             <h1 className="p-text-title">
-              <RiDoubleQuotesL color="#ecba5a" /> I recently used a copyrighting
-              service for my business and was blown away by the results. The
-              team was extremely professional and easy to work with, and they
-              were able to deliver high-quality copyrighting that perfectly
-              captured the voice and tone of my brand. Their attention to detail
-              was exceptional, and they made sure that every word was carefully
-              crafted to effectively communicate my message to my target
-              audience. <RiDoubleQuotesR color="#ecba5a" />
+              <RiDoubleQuotesL color="#ecba5a" /> The digital marketing services
+              provided by Anhur Enterprises have been transformative for my
+              business. With a holistic strategy encompassing SEO, social media
+              management, and content marketing, they have substantially boosted
+              our online reach and yielded remarkable outcomes. The Anhur
+              Enterprises team is not only responsive and well-informed but also
+              committed to staying abreast of the most recent trends in online
+              marketing. I wholeheartedly endorse their services for any
+              organization seeking to elevate their online presence and increase
+              revenue.
+              <RiDoubleQuotesR color="#ecba5a" />
             </h1>
           </div>
           <RiDoubleQuotesL className="p-ab" />
@@ -176,7 +178,7 @@ export default function Home() {
         </AnimatePresence>
       </section>
       <section className="about">
-        <h1 className="about-title">- About</h1>
+        <h1 className="about-title">About</h1>
         <motion.p className="about-p">
           At Anhur Enterprises, we are dedicated to providing top-quality
           services to help our clients succeed. Our team of experts works
@@ -190,12 +192,24 @@ export default function Home() {
       <section className="services">
         <h1 className="service-title">services</h1>
         <div className="service-boxs">
-          <div className="service-box"></div>
-          <div className="service-box"></div>
-          <div className="service-box"></div>
-          <div className="service-box"></div>
-          <div className="service-box"></div>
-          <div className="service-box"></div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
+          <div className="service-box">
+            <div className="blackk" />
+          </div>
         </div>
       </section>
       <section className="testm">

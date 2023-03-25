@@ -208,14 +208,14 @@
 }
 
 .service-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
 }
 
 .service-boxs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 5%;
+  margin-top: 3%;
   gap: 20px;
 }
 
@@ -225,6 +225,50 @@
   background-color: #c9c9c91c;
   box-shadow: 0px 0px 30px px #3f3f3f;
   border-radius: 5px;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.service-box:nth-child(1) {
+  background-image: url(../../assets/ART.jpg);
+}
+
+.service-box:nth-child(2) {
+  background-image: url(../../assets/add.jpg);
+}
+
+.service-box:nth-child(3) {
+  background-image: url(../../assets/copy.jpg);
+}
+
+.service-box:nth-child(4) {
+  background-image: url(../../assets/dm.jpg);
+}
+
+.service-box:nth-child(5) {
+  background-image: url(../../assets/pd.jpg);
+}
+
+.service-box:nth-child(6) {
+  background-image: url(../../assets/pp.jpg);
+}
+
+.blackk {
+  transition: all 0.5s;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.blackk:hover {
+  background-color: #00000080;
+  visibility: visible;
+}
+
+.service-box:hover .blackk {
+  visibility: visible;
 }
 
 @media (min-width: 1500px) {
@@ -236,6 +280,19 @@
   }
   .service-title {
     font-size: 3vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-boxs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services {
+    margin-bottom: 30vh;
+  }
+  .service-title {
+    font-size: 2rem;
+    margin-bottom: 10%;
   }
 }
 
