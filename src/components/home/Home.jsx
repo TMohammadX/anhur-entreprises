@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { useInView } from "react-intersection-observer";
 
 const carouselVariants = {
   enter: { opacity: 0, x: 0 },
@@ -127,6 +128,7 @@ const carouselItems = [
 
 export default function Home() {
   const [currentItem, setCurrentItem] = useState(0);
+  const [abref, inView] = useInView();
 
   const handleNextItem = () => {
     setCurrentItem(
@@ -177,8 +179,14 @@ export default function Home() {
           </div>
         </AnimatePresence>
       </section>
-      <section className="about">
-        <h1 className="about-title">About</h1>
+      <section className="about" ref={abref}>
+        <motion.h1
+          initial={{ y: 30, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+          className="about-title"
+        >
+          About Us
+        </motion.h1>
         <motion.p className="about-p">
           At Anhur Enterprises, we are dedicated to providing top-quality
           services to help our clients succeed. Our team of experts works
@@ -189,34 +197,14 @@ export default function Home() {
           objectives and thrive in a competitive environment.
         </motion.p>
       </section>
-      <section className="services">
-        <h1 className="service-title">services</h1>
-        <div className="service-boxs">
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-          <div className="service-box">
-            <div className="blackk" />
-          </div>
-        </div>
-      </section>
+
       <section className="testm">
-        <h1 className="testm-title">
-          What Others Say <br />
-          <b>About Us</b>
-        </h1>
+        <div className="testm-title">
+          <h1 className="testm-t">What Others Say </h1>
+          <h1 className="testm-t">
+            <b>About Us</b>
+          </h1>
+        </div>
         <div className="testm-in">
           <div className="testm-back" onClick={handlePrevItem}>
             <BsArrowLeftShort />

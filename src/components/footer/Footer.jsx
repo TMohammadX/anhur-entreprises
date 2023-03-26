@@ -15,11 +15,8 @@ export default function Footer() {
         <Link2 to="services" className="footer-link">
           Services
         </Link2>
-        <a href="/" className="footer-link">
-          Contact
-        </a>
-        <a href="/" className="footer-link">
-          Book Now
+        <a href="/getstarted" className="footer-link">
+          Get Started
         </a>
         <a
           href="https://www.instagram.com/anhur_enterprises/"

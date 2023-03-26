@@ -102,6 +102,11 @@
   width: 80%;
 }
 
+.testm-t {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
 .testm-back {
   width: 200px;
   height: 55vh;
@@ -208,7 +213,7 @@
 }
 
 .service-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 400;
 }
 
@@ -308,6 +313,9 @@
     padding: 0;
     margin: 0;
   }
+  .testm-t {
+    font-size: 2rem;
+  }
   .testm-test {
     height: 60vh;
     width: 100%;
@@ -355,6 +363,7 @@
   .about-title {
     display: flex;
     justify-self: start;
+    font-size: 2rem;
   }
   .about-p {
     font-size: 1rem;

@@ -33,9 +33,9 @@ export default function Nav() {
           <Link2 to="about" smooth duration={500} className="nav-link">
             About Us
           </Link2>
-          <Link2 to="services" smooth duration={1000} className="nav-link">
+          <Link to="/services" className="nav-link">
             Services
-          </Link2>
+          </Link>
         </div>
       </div>
       <div className="nav-btns">
@@ -66,21 +66,22 @@ export default function Nav() {
                 to="about"
                 smooth
                 duration={500}
-                offset={-200}
+                offset={50}
                 className="nav-link-m"
                 onClick={handleClose}
               >
                 About Us
               </Link2>
-              <Link2
-                to="services"
-                smooth
-                duration={1000}
+              <Link to="/services" className="nav-link-m" onClick={handleClose}>
+                Services
+              </Link>
+              <Link
+                to="/getstarted"
                 className="nav-link-m"
                 onClick={handleClose}
               >
-                Services
-              </Link2>
+                Get Started
+              </Link>
             </div>
             <div className="b-info">
               <h1 className="b-info-text">
