@@ -160,7 +160,7 @@ export default function Home() {
             <motion.h1
               initial={{ y: 40, opacity: 0.1 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className="main-t"
             >
               <b>Elevate Your Brand </b>With Premium{" "}
@@ -168,14 +168,19 @@ export default function Home() {
             <motion.h1
               initial={{ y: 40, opacity: 0.1 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               className="main-t"
             >
               Services That We Offer.
             </motion.h1>
           </div>
           <div className="main-img-con">
-            <div className="main-img"></div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              className="main-img"
+            ></motion.div>
           </div>
         </AnimatePresence>
       </section>
