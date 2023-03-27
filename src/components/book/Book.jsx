@@ -158,12 +158,6 @@ export default function Book(e) {
               onChange={handleEmailChange}
             />
             <input
-              name="number"
-              type="tel"
-              className="book-input"
-              placeholder="Number"
-            />
-            <input
               name="services"
               type="text"
               className="book-input"
