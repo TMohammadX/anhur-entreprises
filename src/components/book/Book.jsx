@@ -4,6 +4,9 @@ import Transition from "../transition/Transition";
 import gsap from "gsap";
 import emailjs from "emailjs-com";
 import { useLocation } from "react-router-dom";
+import { SiMaildotru } from "react-icons/si";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
 
 export default function Book(e) {
   const [sending, setSending] = useState(false);
@@ -107,7 +110,26 @@ export default function Book(e) {
         <Transition />
       ) : (
         <div className="book">
-          <h1 className="book-title">Lets Get Started</h1>
+          <div className="book-info">
+            <div className="book-title">
+              <h1 className="book-t">Let's Get Started</h1>
+              <h1 className="book-t">Tell Us About Your Project.</h1>
+            </div>
+            <p className="book-p">Let's Make Something Happen Together!</p>
+            <div className="book-social">
+              <h1 className="book-social-title">Email Us</h1>
+              <div className="book-social-con">
+                <SiMaildotru size="2vw" />
+                <h1
+                  className="book-social-text"
+                  role="link"
+                  href="mailto:info@anhurenterprises.com"
+                >
+                  info@anhurenterprises.com
+                </h1>
+              </div>
+            </div>
+          </div>
           <form className="book-box" onSubmit={sendEmail}>
             <div className="book-inputs-left">
               <input
