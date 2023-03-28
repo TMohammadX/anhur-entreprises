@@ -8,10 +8,26 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IoMdMail } from "react-icons/io";
 import { MdOutlinePhoneIphone, MdClose } from "react-icons/md";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [icons, setIcons] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    navigate("/"); // Navigate to the home page
+
+    // Scroll to the About section after the navigation is complete
+    setTimeout(() => {
+      scroller.scrollTo("about", {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }, 100);
+  };
 
   const handleToggle = () => {
     setOpen(!open);
@@ -19,6 +35,10 @@ export default function Nav() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  const handleabm = () => {
+    handleAboutClick();
+    handleClose();
   };
   return (
     <div className="nav">
@@ -30,9 +50,9 @@ export default function Nav() {
           <Link to="/" className="nav-link">
             Home
           </Link>
-          <Link2 to="about" smooth duration={500} className="nav-link">
+          <a onClick={handleAboutClick} className="nav-link">
             About Us
-          </Link2>
+          </a>
           <Link to="/services" className="nav-link">
             Services
           </Link>
@@ -62,16 +82,9 @@ export default function Nav() {
               <Link to="/" className="nav-link-m" onClick={handleClose}>
                 Home
               </Link>
-              <Link2
-                to="about"
-                smooth
-                duration={500}
-                offset={50}
-                className="nav-link-m"
-                onClick={handleClose}
-              >
+              <a className="nav-link-m" onClick={handleabm}>
                 About Us
-              </Link2>
+              </a>
               <Link to="/services" className="nav-link-m" onClick={handleClose}>
                 Services
               </Link>
