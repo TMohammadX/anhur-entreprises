@@ -16,7 +16,12 @@ export default function Services() {
         <h1 className="service-title">services</h1>
         <div className="service-boxs">
           <div className="service-box">
-            <img src={s1} className="service-img" loading="lazy" />
+            <img
+              src={s1}
+              type="image/webp"
+              className="service-img"
+              loading="lazy"
+            />
             <div className="blackk" />
           </div>
           <div className="service-box">
