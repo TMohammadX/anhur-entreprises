@@ -2,12 +2,12 @@ import React from "react";
 import "./services.css";
 import Transition from "../transition/Transition";
 import gsap from "gsap";
-import s1 from "../../assets/ART.jpg";
-import s2 from "../../assets/add.jpg";
-import s3 from "../../assets/copy.jpg";
-import s4 from "../../assets/dm.jpg";
-import s5 from "../../assets/pd.jpg";
-import s6 from "../../assets/pp.jpg";
+import s1 from "../../assets/ART.webp";
+import s2 from "../../assets/add.webp";
+import s3 from "../../assets/copy.webp";
+import s4 from "../../assets/dm.webp";
+import s5 from "../../assets/pd.webp";
+import s6 from "../../assets/pp.webp";
 
 export default function Services() {
   return (
