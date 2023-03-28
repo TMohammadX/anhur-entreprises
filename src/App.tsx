@@ -31,7 +31,7 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/getstarted" element={<Book />} />
+            <Route path="/get-started" element={<Book />} />
             <Route path="*" element={<I404 />} />
           </Routes>
           <Footer />

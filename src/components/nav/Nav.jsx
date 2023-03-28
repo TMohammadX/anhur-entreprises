@@ -17,16 +17,25 @@ export default function Nav() {
   const navigate = useNavigate();
 
   const handleAboutClick = () => {
-    navigate("/"); // Navigate to the home page
-
-    // Scroll to the About section after the navigation is complete
-    setTimeout(() => {
-      scroller.scrollTo("about", {
-        duration: 800,
-        delay: 0,
-        smooth: "easeInOutQuart",
-      });
-    }, 100);
+    if (location.pathname != "/") {
+      navigate("/"); // Navigate to the home page
+      setTimeout(() => {
+        scroller.scrollTo("about", {
+          duration: 1000,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        });
+      }, 1000);
+    } else {
+      // Scroll to the About section after the navigation is complete
+      setTimeout(() => {
+        scroller.scrollTo("about", {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        });
+      }, 100);
+    }
   };
 
   const handleToggle = () => {
@@ -59,7 +68,7 @@ export default function Nav() {
         </div>
       </div>
       <div className="nav-btns">
-        <Link to="/getstarted" className="nav-cta">
+        <Link to="/get-started" className="nav-cta">
           Get Started
         </Link>
         <div className="cta3" onClick={handleToggle}>

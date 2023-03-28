@@ -81,7 +81,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           className="email-input"
           onKeyUp={(event) => handleInputKeyEvent(event)}
         />
-        <button onClick={handleFormSubmit} className="sub">
+        <button onClick={handleFormSubmit} className="submit-footer">
           <HiOutlineArrowSmRight />
         </button>
       </div>

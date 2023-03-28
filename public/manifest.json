@@ -1,0 +1,12 @@
+{
+  "assets/main-legacy.ts": {
+    "file": "assets/main-legacy.dd90b2c6.js",
+    "src": "assets/main-legacy.ts",
+    "isEntry": true
+  },
+  "assets/main.ts": {
+    "file": "assets/main.9470b65c.js",
+    "src": "assets/main.ts",
+    "isEntry": true
+  }
+}
