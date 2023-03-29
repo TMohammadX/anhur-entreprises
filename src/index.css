@@ -32,6 +32,22 @@ b {
   font-weight: 400;
 }
 
+input::placeholder {
+  color: white;
+}
+
+input:-moz-placeholder {
+  color: white;
+}
+
+link {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
 ::selection {
   color: #ecba5a;
   background-color: #fff;

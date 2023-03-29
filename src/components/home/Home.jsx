@@ -185,13 +185,7 @@ export default function Home() {
         </AnimatePresence>
       </section>
       <section className="about" ref={abref}>
-        <motion.h1
-          initial={{ y: 30, opacity: 0 }}
-          animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-          className="about-title"
-        >
-          About Us
-        </motion.h1>
+        <h1 className="about-title">About Us</h1>
         <motion.p className="about-p">
           At Anhur Enterprises, we are dedicated to providing top-quality
           services to help our clients succeed. Our team of experts works
