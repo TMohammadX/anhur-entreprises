@@ -193,13 +193,20 @@
   font-size: 0.8rem;
 }
 
+.p-text {
+  display: grid;
+  position: absolute;
+  height: 55vh;
+  align-items: center;
+  width: 100%;
+}
+
 .p-text-title {
   font-size: 1.1vw;
   color: white;
   font-weight: 300;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  width: 100%;
+
   padding-right: 100px;
 }
 

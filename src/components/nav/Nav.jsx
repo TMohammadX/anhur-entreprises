@@ -98,7 +98,7 @@ export default function Nav() {
                 Services
               </Link>
               <Link
-                to="/getstarted"
+                to="/get-started"
                 className="nav-link-m"
                 onClick={handleClose}
               >

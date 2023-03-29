@@ -219,7 +219,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
+                dragElastic={0.5}
                 onDragEnd={handleDragEnd}
               >
                 {carouselItems[currentItem].content}
