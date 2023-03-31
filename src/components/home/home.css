@@ -16,6 +16,7 @@
   font-size: 5vw;
   margin-bottom: 5%;
   padding-top: 9%;
+  line-height: 110%;
 }
 
 .main-t {
@@ -23,6 +24,20 @@
   font-weight: 400;
   font-size: 5vw;
   margin-bottom: 0;
+}
+
+.t {
+  display: flex;
+  align-items: center;
+}
+
+.t-p {
+  font-size: 0.9rem;
+  line-height: normal;
+  color: #ecba5a;
+  margin-left: 3%;
+  margin-top: 1%;
+  font-weight: 100;
 }
 
 .main-img-con {
@@ -221,6 +236,9 @@
   }
   .service-title {
     font-size: 3vw;
+  }
+  .t-p {
+    font-size: 0.9vw;
   }
 }
 

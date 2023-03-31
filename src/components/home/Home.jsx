@@ -169,9 +169,13 @@ export default function Home() {
               initial={{ y: 40, opacity: 0.1 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="main-t"
+              className="main-t t"
             >
-              Services That We Offer.
+              Services That We Offer.{" "}
+              <p className="t-p">
+                Privately owned and operated <br />
+                online service agency
+              </p>
             </motion.h1>
           </div>
           <div className="main-img-con">

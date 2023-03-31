@@ -60,6 +60,7 @@
   place-items: center;
   text-decoration: none;
   font-size: 0.9rem;
+  border-bottom: 1px solid #ecba5a;
 }
 
 .nav-cta:hover {
