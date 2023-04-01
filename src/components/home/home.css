@@ -31,15 +31,6 @@
   align-items: center;
 }
 
-.t-p {
-  font-size: 0.9rem;
-  line-height: normal;
-  color: #ecba5a;
-  margin-left: 3%;
-  margin-top: 1%;
-  font-weight: 100;
-}
-
 .main-img-con {
   width: 100%;
   height: max-content;
@@ -238,7 +229,7 @@
     font-size: 3vw;
   }
   .t-p {
-    font-size: 0.9vw;
+    font-size: 0.7vw;
   }
 }
 
@@ -322,5 +313,8 @@
   .about-p {
     font-size: 1rem;
     font-weight: 400;
+  }
+  .t-p {
+    display: none;
   }
 }

@@ -18,6 +18,15 @@
 
 .logo-con {
   margin-right: 20%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.t-p {
+  font-size: 0.6rem;
+  color: white;
+  width: 30ch;
 }
 
 .logo {

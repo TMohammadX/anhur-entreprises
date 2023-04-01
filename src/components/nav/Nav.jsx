@@ -54,7 +54,12 @@ export default function Nav() {
       <div className="nav-inner">
         <a href="/" className="logo-con">
           <img src={logo} alt="logo" className="logo" />
+          <p className="t-p">
+            Privately owned and operated <br />
+            online service agency
+          </p>
         </a>
+
         <div className="nav-links">
           <Link to="/" className="nav-link">
             Home

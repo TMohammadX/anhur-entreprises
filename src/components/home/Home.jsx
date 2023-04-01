@@ -172,10 +172,6 @@ export default function Home() {
               className="main-t t"
             >
               Services That We Offer.{" "}
-              <p className="t-p">
-                Privately owned and operated <br />
-                online service agency
-              </p>
             </motion.h1>
           </div>
           <div className="main-img-con">
